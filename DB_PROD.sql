@@ -157,5 +157,3 @@ WHERE
 SELECT prd_nome, prd_valor, (SELECT AVG(prd_valor) FROM produtos) as media_geral
 FROM produtos
 WHERE prd_valor > (SELECT AVG(prd_valor) FROM produtos);
-
-SELECT prd_nome, prd_valor, (SELECT AVG(prd_valor) FROM produtos) as media_geral FROM produtos WHERE prd_valor > (SELECT AVG(prd_valor) FROM produtos) LIMIT 0, 50000
